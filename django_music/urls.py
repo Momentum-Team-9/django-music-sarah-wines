@@ -20,5 +20,5 @@ from Album import views as album_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', album_views.list_Albums, name='list_albums'),
+    path('', album_views.list_albums, name='list_albums'),
 ]
