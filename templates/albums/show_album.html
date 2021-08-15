@@ -1,13 +1,22 @@
 {% extends "base.html" %} {% block content %}
-<h2>{{album.title}}</h2>
-<img
-  class="album-art"
-  src="../../static/images/Screen_Shot_2021-08-15_at_2.19.24_PM.png"
-  alt="{{album.title}}"
-/>
-<p>Artist: {{album.artist}}</p>
-<p>Released: {{album.release_year}}</p>
-<p>Added: {{album.created_at}}</p>
-<a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br />
-<a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+<div class="show-container">
+  <h2 class="show-title">{{album.title}}</h2>
+  <img
+    class="album-art"
+    src="../../static/images/Screen_Shot_2021-08-15_at_2.19.24_PM.png"
+    alt="{{album.title}}"
+  />
+  <div class="info">
+    <p>Artist: {{album.artist}}</p>
+    <p>Released: {{album.release_year}}</p>
+    <p>Added: {{album.created_at}}</p>
+  </div>
+  <div class="actions">
+    <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br />
+
+    <a class="delete" href="{% url 'delete_album' pk=album.pk %}"
+      >Delete Album</a
+    >
+  </div>
+</div>
 {% endblock %}

@@ -1,6 +1,8 @@
 {% extends "base.html" %} {% block content %}
-<h1>Albums</h1>
-<p><a href="{% url 'add_album' %}">Add New Album</a></p>
+
+  <h1 class="page-title">Albums</h1>
+  <button class="add-new"><a href="{% url 'add_album' %}">+ Album</a></button>
+</div>
 <div>
   <div class="album-field">
     {% for album in albums %}
@@ -20,8 +22,8 @@
       <p>Released: {{album.release_year}}</p>
       <p>Added: {{album.created_at}}</p>
       <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br />
-      <a href="{% url 'show_album' pk=album.pk%}">Album Details</a>
-      <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+      
+      <a class="delete" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
     </div>
     {% endfor %}
   </div>

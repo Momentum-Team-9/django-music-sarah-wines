@@ -7,12 +7,13 @@
 
 .album-card {
   border: 1px solid black;
+
   margin: 10px;
   text-align: center;
   padding: 10px;
   flex-wrap: wrap;
   height: 400px;
-  width: 250px;
+  width: 300px;
   background-color: whitesmoke;
 }
 
@@ -21,7 +22,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: top;
-  background-color: #272127;
+  background-color: lightgrey;
 }
 .album-art {
   width: 200px;
@@ -32,4 +33,60 @@
 .album-title {
   font-size: 12px;
   margin-top: 20px;
+}
+
+.page-title {
+  color: #272127;
+  background-color: lightgrey;
+  text-align: center;
+  padding: 20px;
+}
+.add-new {
+  padding: 10px;
+  text-align: center;
+  background-color: #00ff00;
+  width: 100px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.delete {
+  color: #ff0000;
+}
+.delete:visited {
+  color: #ff0000;
+} /* Visited link    */
+
+a {
+  color: black;
+} /* Unvisited link  */
+a:visited {
+  color: black;
+} /* Visited link    */
+.delete:hover {
+  color: #ff00ff;
+} /* Mouse over link */
+a:hover {
+  color: #ff00ff;
+} /* Mouse over link */
+a:active {
+  color: #0000ff;
+} /* Selected link   */
+
+.show-container {
+  align-items: center;
+  padding-top: 200px;
+}
+.info {
+  padding: 20px;
+}
+.actions {
+  padding: 20px;
+}
+.show-title {
+  padding: 20px;
 }
