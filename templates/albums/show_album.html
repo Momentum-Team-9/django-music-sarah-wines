@@ -1,5 +1,10 @@
 {% extends "base.html" %} {% block content %}
 <h2>{{album.title}}</h2>
+<img
+  class="album-art"
+  src="../../static/images/Screen_Shot_2021-08-15_at_2.19.24_PM.png"
+  alt="{{album.title}}"
+/>
 <p>Artist: {{album.artist}}</p>
 <p>Released: {{album.release_year}}</p>
 <p>Added: {{album.created_at}}</p>

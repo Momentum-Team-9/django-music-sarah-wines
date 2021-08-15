@@ -5,7 +5,17 @@
   <div class="album-field">
     {% for album in albums %}
     <div class="album-card">
-      <h2>{{album.title}}</h2>
+      <div class="album-title">
+        <h2>{{album.title}}</h2>
+      </div>
+      <a href="{% url 'show_album' pk=album.pk%}">
+        <img
+          class="album-art"
+          src="../../static/images/Screen_Shot_2021-08-15_at_2.19.24_PM.png"
+          alt="{{album.title}}"
+        />
+      </a>
+
       <p>Artist: {{album.artist}}</p>
       <p>Released: {{album.release_year}}</p>
       <p>Added: {{album.created_at}}</p>

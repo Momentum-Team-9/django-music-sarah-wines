@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .album-card {
@@ -9,8 +10,10 @@
   margin: 10px;
   text-align: center;
   padding: 10px;
-  max-width: 200px;
   flex-wrap: wrap;
+  height: 400px;
+  width: 250px;
+  background-color: whitesmoke;
 }
 
 .album-field {
@@ -18,4 +21,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: top;
+  background-color: #272127;
+}
+.album-art {
+  width: 200px;
+  height: 200px;
+  margin-top: 25px;
+}
+
+.album-title {
+  font-size: 12px;
+  margin-top: 20px;
 }
