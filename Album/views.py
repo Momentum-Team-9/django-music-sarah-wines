@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Album, Track
+from .forms import AlbumForm
 # Create your views here.
 def list_albums(request):
     albums = Album.objects.all()
@@ -12,3 +13,23 @@ def show_album(request, pk):
         "albums/show_album.html",
         {"album": album, "pk": pk},
     )
+
+def add_album(request):
+    if request.method == 'GET':
+        form = AlbumForm()
+    else:
+        form = AlbumForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(to='list_albums')
+
+    return render(request, "albums/add_album.html", {"form": form})
+    
+def delete_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'POST':
+        album.delete()
+        return redirect(to='list_albums')
+
+    return render(request, "albums/delete_album.html",
+                  {"album": album})
