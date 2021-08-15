@@ -6,8 +6,10 @@
     {% for album in albums %}
     <div class="album-card">
       <h2>{{album.title}}</h2>
-      <p>{{album.artist}}</p>
-      <p>{{album.release_year}}</p>
+      <p>Artist: {{album.artist}}</p>
+      <p>Released: {{album.release_year}}</p>
+      <p>Added: {{album.created_at}}</p>
+      <a href="{% url 'show_album' pk=album.pk%}">Album Details</a>
     </div>
     {% endfor %}
   </div>
