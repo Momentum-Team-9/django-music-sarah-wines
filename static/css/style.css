@@ -90,3 +90,7 @@ a:active {
 .show-title {
   padding: 20px;
 }
+.album-form {
+  align-items: center;
+  padding-top: 200px;
+}

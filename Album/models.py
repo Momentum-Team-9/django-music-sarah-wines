@@ -4,7 +4,7 @@ from django.db.models.fields import DateTimeField
 class Album(models.Model):
     title = models.CharField(max_length=250)
     artist = models.CharField(max_length=255)
-    album_photo = models.CharField(max_length=250, blank=True, null=True)
+    album_photo = models.ImageField(upload_to='images', null=True, blank=True)
     created_at = DateTimeField(auto_now_add = True)
     release_year = models.IntegerField(null=True, blank=True)
 
